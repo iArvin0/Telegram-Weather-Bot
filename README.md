@@ -1,181 +1,155 @@
-# ربات هواشناسی تلگرام | Telegram Weather Bot
+<a id="top"></a>
 
-## فارسی
+<div align="center">
 
-این پروژه یک ربات دو‌زبانهٔ تلگرام است. نام شهر را به انگلیسی دریافت می‌کند و با سرویس Open-Meteo گزارش کامل هواشناسی را به فارسی یا انگلیسی نمایش می‌دهد. Open-Meteo به API Key جداگانه نیاز ندارد.
+# Telegram Weather Bot 🌦️
 
-### امکانات
+Get current weather information directly in Telegram.
 
-- رابط فارسی و انگلیسی با دکمهٔ انتخاب زبان
-- جست‌وجوی شهرهای سراسر جهان
-- دما، دمای احساسی، رطوبت، پوشش ابر و فشار
-- بارش، سرعت و جهت باد و تندباد
-- وضعیت روز/شب، طلوع و غروب
-- پیش‌بینی پنج‌روزه، احتمال بارش و کمینه/بیشینه دما
-- مدیریت شهر نامعتبر، قطعی اینترنت و خطاهای سرویس
+### Choose your language
 
-### همهٔ فرمان‌ها
+[English](#english) · [فارسی](#فارسی)
 
-| فرمان | توضیح |
-|---|---|
-| `/start` | شروع بات و نمایش انتخاب زبان |
-| `/help` | نمایش راهنما، روش کار، امکانات و فرمان‌ها |
-| `/language` | تغییر زبان فارسی یا انگلیسی |
-| `/weather CITY` | دریافت هوا؛ مثال: `/weather Tehran` |
-
-نام شهر را می‌توان مستقیماً نیز فرستاد و استفاده از `/weather` اجباری نیست.
-
-### روش کار با بات
-
-1. در تلگرام `/start` را بفرستید.
-2. «فارسی» یا `English` را انتخاب کنید.
-3. نام شهر را انگلیسی ارسال کنید؛ مانند `Tehran`، `Istanbul` یا `New York`.
-4. برای شهرهای هم‌نام، کشور را اضافه کنید؛ مانند `Cambridge, UK`.
-5. با `/help` راهنمای کامل داخل بات نمایش داده می‌شود.
-
-### پیش‌نیازها
-
-- Python 3.10 یا جدیدتر
-- اینترنت
-- توکن ربات از `@BotFather`
-
-### دریافت توکن
-
-در تلگرام وارد `@BotFather` شوید، `/newbot` را ارسال و مراحل را انجام دهید. توکن را محرمانه نگه دارید و در GitHub یا پیام عمومی منتشر نکنید.
-
-### نصب در Windows PowerShell
-
-```powershell
-cd C:\path\to\telegram-weather-bot
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install -r requirements.txt
-Copy-Item .env.example .env
-notepad .env
-py bot.py
-```
-
-فایل `.env` باید حاوی توکن واقعی باشد:
-
-```env
-TELEGRAM_BOT_TOKEN=123456789:YOUR_REAL_BOTFATHER_TOKEN
-```
-
-اگر PowerShell فعال‌سازی محیط را مسدود کرد:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-```
-
-### نصب در Linux/macOS
-
-```bash
-cd /path/to/telegram-weather-bot
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-cp .env.example .env
-nano .env
-python bot.py
-```
-
-### رفع خطاهای رایج
-
-- `TELEGRAM_BOT_TOKEN is missing`: فایل `.env` یا توکن آن تنظیم نشده است.
-- `No module named ...`: محیط مجازی را فعال و requirements را نصب کنید.
-- شهر پیدا نمی‌شود: نام انگلیسی و کشور را وارد کنید؛ مانند `Paris, France`.
-- بات پاسخ نمی‌دهد: اینترنت، اعتبار توکن و باز بودن `bot.py` را بررسی کنید.
+</div>
 
 ---
 
-## English
+<a id="english"></a>
 
-This is a bilingual Telegram bot. It accepts an English city name and uses Open-Meteo to return a detailed weather report in Persian or English. Open-Meteo does not require a separate API key.
+## English 🇬🇧
+
+Telegram Weather Bot is a simple bot that lets users check the current weather for a city without leaving Telegram.
 
 ### Features
 
-- Persian and English interface with language buttons
-- Worldwide city search
-- Temperature, apparent temperature, humidity, cloud cover, and pressure
-- Precipitation, wind speed/direction, and gusts
-- Day/night status, sunrise, and sunset
-- Five-day forecast, precipitation probability, and minimum/maximum temperatures
-- Friendly handling of invalid cities, network errors, and service failures
-
-### All commands
-
-| Command | Description |
-|---|---|
-| `/start` | Start the bot and display language selection |
-| `/help` | Show help, usage, features, and commands |
-| `/language` | Switch between Persian and English |
-| `/weather CITY` | Get city weather; example: `/weather London` |
-
-You can also send a city name directly; `/weather` is optional.
-
-### Using the bot
-
-1. Send `/start` in Telegram.
-2. Select `فارسی` or `English`.
-3. Send an English city name such as `Tehran`, `Istanbul`, or `New York`.
-4. For similarly named cities, include the country, such as `Cambridge, UK`.
-5. Send `/help` at any time for complete in-chat instructions.
+- Get current weather information by city name
+- Display temperature and weather conditions
+- Fast and simple Telegram commands
+- Secure configuration with environment variables
 
 ### Requirements
 
 - Python 3.10 or newer
-- Internet access
-- A Telegram bot token from `@BotFather`
+- A Telegram bot token from [BotFather](https://t.me/BotFather)
+- A weather API key
 
-### Getting a token
+### Installation
 
-Open `@BotFather` in Telegram, send `/newbot`, and follow the prompts. Keep the token secret; never commit it to GitHub or post it publicly.
+1. Clone the repository:
 
-### Windows PowerShell installation
+   ```bash
+   git clone https://github.com/iArvin0/Telegram-Weather-Bot.git
+   cd Telegram-Weather-Bot
+   ```
 
-```powershell
-cd C:\path\to\telegram-weather-bot
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install -r requirements.txt
-Copy-Item .env.example .env
-notepad .env
-py bot.py
-```
+2. Install the dependencies:
 
-The `.env` file must contain the real token:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```env
-TELEGRAM_BOT_TOKEN=123456789:YOUR_REAL_BOTFATHER_TOKEN
-```
+3. Create a `.env` file and add your credentials:
 
-If PowerShell blocks environment activation:
+   ```env
+   TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+   WEATHER_API_KEY=your_weather_api_key
+   ```
 
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-```
+4. Run the bot:
 
-### Linux/macOS installation
+   ```bash
+   python main.py
+   ```
 
-```bash
-cd /path/to/telegram-weather-bot
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-cp .env.example .env
-nano .env
-python bot.py
-```
+### Usage
 
-### Troubleshooting
+Start the bot in Telegram and send a city name to receive its current weather information.
 
-- `TELEGRAM_BOT_TOKEN is missing`: create `.env` and add a valid token.
-- `No module named ...`: activate the virtual environment and install requirements.
-- City not found: use an English name with the country, for example `Paris, France`.
-- No bot response: check the internet, token, and whether `bot.py` is running.
+### Security
 
-### Data and privacy
+Never commit your `.env` file or expose your API keys publicly.
 
-Submitted city names are sent to [Open-Meteo](https://open-meteo.com/) for geocoding and weather data. The Telegram token is loaded locally from `.env`, which is excluded by `.gitignore`.
+### Contributing
+
+Contributions are welcome. Fork the repository, create a new branch, and open a pull request.
+
+### License
+
+This project is available under the [MIT License](LICENSE).
+
+<div align="right">
+
+[بازگشت به انتخاب زبان](#top)
+
+</div>
+
+---
+
+<a id="فارسی"></a>
+
+## فارسی 🇮🇷
+
+ربات آب‌وهوای تلگرام یک ربات ساده است که به کاربران اجازه می‌دهد بدون خارج‌شدن از تلگرام، وضعیت فعلی آب‌وهوای شهر موردنظرشان را مشاهده کنند.
+
+### قابلیت‌ها
+
+- دریافت وضعیت فعلی آب‌وهوا با نام شهر
+- نمایش دما و شرایط جوی
+- دستورات سریع و ساده در تلگرام
+- نگهداری امن تنظیمات با متغیرهای محیطی
+
+### پیش‌نیازها
+
+- پایتون نسخه 3.10 یا جدیدتر
+- توکن ربات تلگرام از [BotFather](https://t.me/BotFather)
+- کلید دسترسی سرویس آب‌وهوا
+
+### نصب و راه‌اندازی
+
+1. مخزن را دریافت کنید:
+
+   ```bash
+   git clone https://github.com/iArvin0/Telegram-Weather-Bot.git
+   cd Telegram-Weather-Bot
+   ```
+
+2. وابستگی‌ها را نصب کنید:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. یک فایل `.env` بسازید و اطلاعات دسترسی را در آن قرار دهید:
+
+   ```env
+   TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+   WEATHER_API_KEY=your_weather_api_key
+   ```
+
+4. ربات را اجرا کنید:
+
+   ```bash
+   python main.py
+   ```
+
+### نحوه استفاده
+
+ربات را در تلگرام اجرا کنید و نام یک شهر را بفرستید تا اطلاعات فعلی آب‌وهوای آن را دریافت کنید.
+
+### امنیت
+
+فایل `.env` را در Git ثبت نکنید و کلیدهای API خود را به‌صورت عمومی در اختیار دیگران قرار ندهید.
+
+### مشارکت
+
+از مشارکت شما استقبال می‌شود. مخزن را Fork کنید، یک شاخه جدید بسازید و Pull Request ارسال کنید.
+
+### مجوز
+
+این پروژه تحت [مجوز MIT](LICENSE) منتشر شده است.
+
+<div align="right">
+
+[Back to language selection](#top)
+
+</div>
