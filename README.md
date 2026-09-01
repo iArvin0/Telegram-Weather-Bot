@@ -52,7 +52,6 @@ Telegram Weather Bot is a simple bot that lets users check the current weather f
 
    ```env
    TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-   WEATHER_API_KEY=your_weather_api_key
    ```
 
 4. Run the bot:
@@ -123,7 +122,7 @@ This project is available under the [MIT License](LICENSE).
 
    ```env
    TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-   WEATHER_API_KEY=your_weather_api_key
+   
    ```
 
 4. ربات را اجرا کنید:
